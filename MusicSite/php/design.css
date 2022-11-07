@@ -1,0 +1,470 @@
+/*NOTE: Centering the body results in uneven burger menu*/
+body {
+    position: relative;
+    min-height: 40vh;
+}
+
+.flyout-menu {
+ display: flex;
+ width: 100vw;
+ height: 40vh;
+ background-color: #000000;
+ position: fixed;
+ padding: 0;
+ margin: 0;
+ top: 0;
+ left: 0;
+ transform: translate3d(0, -40vh, 0);
+ transition: transform .5s cubic-bezier(0, .52, 0, 1);
+ align-items: center;
+ justify-content: center;
+    z-index: 100; /*Ensures that the menu and button appears in front of the carousel*/
+}
+
+.flyout-menu.show ul {
+    list-style-type: none;
+    padding-top: 2.5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.flyout-menu ul li{
+    padding: 1%;
+    font-size: 25px;
+}
+
+.flyout-menu.show {
+ transform: translate3d(0, 0vw, 0);
+}
+
+.flyout-menu a {
+ color: #FFFFFF;
+ text-align: center;
+ text-decoration: none;
+ font-family: "Comfortaa";
+}
+
+.flyout-menu a:hover {
+ text-decoration: underline;
+}
+
+#container-i {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+}       
+
+
+/*#container-a {
+ grid-template-rows: repeat(10, fr);
+}*/
+
+.logo {
+ grid-area: logo;
+ background-color: black;
+ grid-column: span 2;
+ grid-row: span 1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 2px;
+}
+
+.myName {
+ font-family: "Comfortaa";
+ text-decoration: none;
+ color: white;
+}
+
+#menuLogo {
+    width: 15vw;
+}
+
+.myName:hover {
+ cursor: pointer;
+}
+
+.links {
+ grid-area: links;
+ grid-column: span 5;
+ grid-row: span 1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ overflow: hidden;
+ margin: 2px;
+ background-color: black;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 0;
+    list-style-type: none;
+    width: 80%;
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
+.navigation a {
+ color: white;
+ text-decoration: none;
+ font-family: "Comfortaa";
+}
+
+.navigation a: hover {
+ text-decoration: underline;
+}
+
+.iconcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+} /*Placed here to prevent overwriting style when using mobile device*/
+
+@media screen and (max-width:600px) {
+ .links {
+  display: none;
+ }
+ .logo {
+  grid-column: span 7;
+  grid-row: span 1;
+ }
+    
+    #menuLogo {
+    width: 35vw;
+}
+ 
+ .navigation a {
+  display: none;
+ }
+    
+    .iconcontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #embedvid1, #embedvid2, #embedvid3 {
+        text-align: center;
+        margin: 2.5%;
+    }
+    
+    #aboutpage p {
+        font-size: 16px;
+    }
+}
+
+.menu {
+ grid-area: menu;
+ grid-column: span 1;
+ grid-row: span 1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 2px;
+ background-color: black;
+    z-index: 100; /*Ensures that the menu and button appears in front of the carousel*/
+}
+
+.menu-btn {
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ width: 80%;
+ height: 80%;
+ transition: all 0.5s ease-in-out;
+}
+
+.btn-mid {
+ position: relative;
+ width: 25px;
+ height: 3px;
+ background: white;
+ border-radius: 2px;
+ transition: all 0.5s ease-in-out;
+}
+
+.btn-mid::before, .btn-mid::after {
+ position: absolute; 
+ content: '';
+ width: 25px;
+ height: 3px;
+ background: white;
+ border-radius: 2px;
+ transition: all 0.5s ease-in-out;
+}
+
+.btn-mid::before {
+ transform: translateY(-300%);
+}
+
+.btn-mid::after {
+ transform: translateY(300%);
+}
+
+.menu-btn.open .btn-mid {
+ transform: translateX(-175%);
+ background: transparent;
+}
+
+.menu-btn.open .btn-mid::before {
+ transform: rotate(45deg) translate(125%, -1050%);
+}
+
+.menu-btn.open .btn-mid::after {
+ transform: rotate(-45deg) translate(125%, 1050%);
+}
+
+.content {
+ /*grid-area: content;*/
+ padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ margin: 2px;
+ background-repeat: no-repeat;
+ background-size: cover;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ grid-column: span 8;
+ /*height: 50vh;*/
+    padding-bottom: 1.25rem; /*Needs to match the height of the footer*/
+}
+
+#homepage {
+ grid-row: span 3;
+ /*background-image: url("https://i.stack.imgur.com/xkpSw.jpg");*/
+}
+
+#homeCarousel {
+/*    z-index: -1;This disables the indicators and the cursors.*/
+    width: 100vw;
+}
+
+#homeCarousel img {
+    padding: 0;
+    display: block; /*These attributes keep the image from shifting on each slide*/
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#aboutpage {
+ /*grid-row: span 8;*/
+}
+
+.photo {
+    height: 100%;
+    background: url('Brooklyn-Homepage.png') top left no-repeat;
+    background-size: cover;
+}
+
+.heading {
+    margin-top: 5%;
+    margin-bottom: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
+    line-height: 2.5;
+}
+
+.heading h4 {
+    text-align: center;
+    font-weight: bold;
+}
+.heading p {
+    font-size: 19px;
+}
+
+#musicpage {
+ grid-row: span 3;
+}
+
+.musicicon {
+    border-radius: 10px;
+    background-color: black;
+    height: 250px;
+    color: white;
+}
+
+#embedvid1, #embedvid2, #embedvid3 {
+    text-align: center;
+    margin: 2.5%;
+}
+
+.div1 {
+    border-style: dashed;
+    border-radius: 10px;
+    text-align: center;
+    border-width: 0.5%;
+    width: 300px;
+    height: 300px;
+    margin: 2.5%;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    border-radius: 10px;
+    height: 90%; /*Only Set Limit for height, or background will be out of place*/
+    margin: 5%;
+}
+
+.div2 label {
+    color: white;
+    font-family: "Comfortaa";
+    margin-bottom: 0;
+}
+
+#price {
+    color: white;
+    font-family: "Comfortaa";
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.div2 img {
+    border-radius: 20px;
+}
+
+.div3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 10%;
+    width: 85%;
+    text-align: center;
+    
+}
+
+#addToCart {
+    border: none;
+    color: white;
+    width: 57.5%;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    font-family: "Comfortaa";
+}
+
+#tourpage, #contactpage {
+ grid-row: span 2;
+    text-align: center;
+}
+
+h3, h4, label, p {
+ font-family: "Comfortaa";
+}
+
+.contact-info {
+ text-align: center;
+}
+
+input {
+ height: 50px;
+}
+
+input, textarea {
+/* border: 2px outset black;*/
+ border-radius: 0px;
+/* width: 200px;*/
+    color: white; 
+    background-color: black; 
+    font-family: 'Comfortaa';
+    font-size: 20px;
+}
+
+.footer {
+    position: absolute;
+    grid-column: span 8;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    padding-top: 1.25rem; /*Needs to match padding-bottom of content; having too much will cause it to 'bleed' into the content and reduce responsiveness*/
+    width: 100%;
+    height: 1.25rem; /*Needs to match padding-bottom of content*/
+    
+}
+ 
+ /*button {
+  font-family: "Comfortaa";
+  border: 2px outset black;
+  width: 150px;
+  height: 50px;
+  margin-bottom: 5%;
+ }*/
+
+
+.foot {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.foot input {
+    font-family: "Comfortaa";
+}
+
+.foot button {
+    width: 15%;
+    height: 30px;
+    border: none;
+    
+}
+
+.social {
+    width: 30vw;
+}
+
+.social a {
+    padding: 5%;
+}
+
+.links2 {
+    width: 60vw;
+}
+
+.social-media {
+ height: 48px;
+ width: 48px;
+}
+
+.nav-footer {
+ list-style-type: none;
+ padding-left: 0;
+    font-size: 18px;
+}
+
+.nav-footer li {
+ display: inline;
+ font-family: "Comfortaa";
+}
+
+.nav-footer a {
+ color: black;
+}
+
+#override {
+    /*Used to ignore changes to header classes in the reboot.scss boostrap style class*/
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-weight: 500;
+    line-height: 1.2;
+}
