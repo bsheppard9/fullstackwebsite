@@ -1,0 +1,17 @@
+<?php
+    include('php/header.php');
+    include('php/footer.php');
+    define("TITLE", "BLKGRYWHT | BIO");
+?>
+    <title><?php echo TITLE; ?></title>
+   <div id="aboutpage" class="item content">
+       <div class="photo">
+           <div class="heading">
+               <h1 style="font-family: 'Comfortaa'; text-align: center;"><strong>My Story (In a Nutshell)</strong></h1><br>
+                    <p>I started off singing and performing at a very young age in church, and admittedly, I <strong>HATED</strong> it. While I did have a natural born love for the visual arts, at the time, I never would have imagined a future in music. For most of my life, it felt like a cloud of gloom and self-loathing loomed over me, even before I even realized it.  Up until I turned 16, I had never really thought about what it meant to be a Christian. After I decided to truly follow Jesus, admittedly, the first few years of my journey were some of the <em>loneliest</em> years of my life. I realized how miserable and alone in the world I was. At the time I believed that Christian music was all the same, but I felt the urge in my heart to give it a chance. I happened to hear Matthew West’s “Strong Enough”, and it totally changed my perspective. The lyrics were so relatable to me personally, and it let me know that other believers (and God) knew what I was going through.  I realized that I wanted to share this experience with others and encourage people through music too.<br><br>
+                    In my late high school and early college years, I began finding myself and finding out what kind of music I liked and wanted to play. I started making connections to help get me started with songwriting, which quickly became my new passion. But I still had a long way to go in addition to overcoming my shyness and stage fright. Throughout most of my life, I have also struggled in acknowledging my self-worth, and this has even carried on into adulthood. I endured a season of depression, which turned out to be a season that I began to understand the significance in being vulnerable with people. I understand that some people may not relate to me or even like my brand and style, but I still sometimes worry too much about pleasing everyone. In spite of all of the obstacles, some that I’ve faced have turned into opportunities, as I realize that millions of people have had experiences like these too. I’ve found that I can use my quirks and struggles to write songs and help my audience understand me on a more authentic level.<br><br>
+                    Ultimately, I would like to share what God has taught me through these songs and help people understand not to view emotional and mental struggles as anchors, but as opportunities for us to grow and change.  Music is one of the best outlets for me. It's clear I still struggle with emotional health, but I’m thinking of these struggles as opportunities to be vulnerable with my audience and even myself, and to continue to grow spiritually and emotionally. I cannot deny that music has changed me in ways that I could never imagine. My goal is to touch others struggling with faith and/or emotional health, and possibly help them better understand themselves along the way. But If I could change just <strong>ONE</strong> person’s life with my songs, or I have the confidence that I’m doing what God has called me to do, I’ll consider that an accomplishment.</p>
+           </div>
+       </div>
+   </div>
+  
